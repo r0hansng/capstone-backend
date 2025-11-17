@@ -6,14 +6,11 @@
   "author": "",
   "type": "module",
   "main": "src/server.js",
-  "scripts": {
-    "dev": "nodemon src/server.js",
-    "start": "node src/server.js",
-    "build": "npm install && npx prisma generate",
-    "postinstall": "prisma generate",
-    "prettier": "npx prettier . --check",
-    "prettier-fix": "npx prettier . --write"
-  },
+ "scripts": {
+  "dev": "nodemon src/server.js",
+  "start": "node src/server.js",
+  "build": "npx prisma generate"
+},
   "dependencies": {
     "@prisma/client": "^6.19.0",
     "bcryptjs": "^3.0.3",
