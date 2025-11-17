@@ -22,7 +22,7 @@ const generateAccessAndRefreshTokens = (userId) => {
 };
 
 const options = {
-    httpOnly: true, //Modifiable only through the server
+    httpOnly: true, 
     secure: true,
 };
 
@@ -41,14 +41,13 @@ export const registerUser = asyncHandler(async (req, res) => {
         throw new ApiError(409, "User with given email already exists");
     }
 
-    // HASH THE PASSWORD
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await prisma.users.create({
         data: {
             fullName,
             email: email.toLowerCase(),
-            password: hashedPassword,   // SAVE HASHED PASSWORD
+            password: hashedPassword,   
         },
         select: {
             id: true,
