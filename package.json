@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "build": "npx prisma generate",
+    "build": "npm install && npx prisma generate",
     "postinstall": "prisma generate",
     "prettier": "npx prettier . --check",
     "prettier-fix": "npx prettier . --write"
