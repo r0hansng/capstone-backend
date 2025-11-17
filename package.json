@@ -8,6 +8,7 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
     "build": "npm i",
     "prettier": "npx prettier . --check",
     "prettier-fix": "npx prettier . --write"
